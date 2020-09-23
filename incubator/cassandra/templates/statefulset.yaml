@@ -182,6 +182,11 @@ spec:
           preStop:
             exec:
               command: ["/bin/sh", "-c", "exec nodetool decommission"]
+        {{- else if .Values.preStopCmd }}
+        lifecycle:
+          preStop:
+            exec:
+              command: ["/bin/sh", "-c", "{{ .Values.preStopCmd }}"]
         {{- end }}
       terminationGracePeriodSeconds: {{ default 30 .Values.podSettings.terminationGracePeriodSeconds }}
       {{- if .Values.image.pullSecrets }}

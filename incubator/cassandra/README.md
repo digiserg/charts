@@ -120,6 +120,7 @@ The following table lists the configurable parameters of the Cassandra chart and
 | `configOverrides`                    | Overrides config files in /etc/cassandra dir    | `{}`                                                       |
 | `commandOverrides`                   | Overrides default docker command                | `[]`                                                       |
 | `argsOverrides`                      | Overrides default docker args                   | `[]`                                                       |
+| `preStopCmd`                         | Run this command before stopping the pod        |                                                            |
 | `env`                                | Custom env variables                            | `{}`                                                       |
 | `schedulerName`                      | Name of k8s scheduler (other than the default)  | `nil`                                                      |
 | `persistence.enabled`                | Use a PVC to persist data                       | `true`                                                     |

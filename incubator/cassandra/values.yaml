@@ -252,3 +252,8 @@ extraContainers: []
 #   volumeMounts:
 #   - name: some-mount
 #     mountPath: /some/path
+
+## Run this command before the pod is stopped
+# Example: exec nodetool drain
+preStopCmd: ""
+
